@@ -6,4 +6,3 @@ report.pdf: report.tex
 
 view: report.pdf
 	evince report.pdf&
-
