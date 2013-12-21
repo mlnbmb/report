@@ -127,7 +127,7 @@ In order to know better about the functionning of the plane, I was assigned to d
 
 \bigskip
 
-I also schematized the instrument panel for the Pilot's Operating Handbook to have a global view of the cabin.
+I also schematized the instrument panel for the Pilot's Operating Handbook to have a global view of the cabin. Depending on the LSTC chosen, we have the instrument panel with TL instrument or G3X system.
 %TODO: picture of the instrument panel (2D)
 
 \bigskip
@@ -144,8 +144,8 @@ The cabin heating system is an optional feature. It is installed on the firewall
 
 \bigskip
 
-In parallel with the 2D drawings production, I drew 3D drawings for the Illustrated Parts Catalog (IPC). Since Lambert Aircraft Engineering sells the aircraft in kit in Europe to homebuilders, they have the IPC to explain step by step how to assemble correctly the aircraft with every part referenced.
-%TODO: picture of a 3D drawing
+In parallel with the 2D drawings production, I drew 3D drawings for the Illustrated Parts Catalog (IPC). Since Lambert Aircraft Engineering sells the aircraft in kit in Europe to homebuilders, they have an IPC in order to explain step by step how to assemble correctly the aircraft with every part referenced.
+%TODO: picture of a 3D drawing with an Excel sheet
 
 \bigskip
 
@@ -155,8 +155,11 @@ I completed the sections concerning the firewall forward installation, the fuel 
 \bigskip
 
 I then created all the IPC structure and the 3D drawings for the electrical, Pitot and statics, and brake systems.
-The electrical system is very complex because it depends on the choice of avionics products the customer wants, and the Supplemental Type Certificate he would like to have. I needed to find a logical structure which can group the common equipment, and separate every option to keep it as simple as possible.
+The electrical system is very complex because it depends on the choice of avionics products the customer wants, and the LSTCs he would like to have. I needed to find a logical structure which can group the common equipment, and separate every option to keep it as simple as possible.
 %TODO: picture of the 1-S2 IPC structure
+
+This structure takes in account the basic electrical components which are present anyway, and each option is defined with one part number. If the client needs to see how to install the nav lights, he will need to reach the 1-S2-995300-00 drawing for further information.
+
 %TODO: picture of the instrument panel (3D)
 
 \bigskip
@@ -165,20 +168,22 @@ The Pitot and static systems are not new, but there was no partslist and assembl
 %TODO: picture of the 1-S5 IPC
 
 The brake system was an important part of the internship. The 2D and 3D drawings already exist but for the tailwheel version.
+%TODO: difference between tailwheel and nosewheel model (schematic)
 %TODO: explain how the tailwheel version works.
 In coordination with the design and the production teams, we designed the new brake system but for a nosewheel version. This was totally provisional and the design work has been done at the same time as the installation.
 %TODO: picture of the 1-S6 IPC (0051-00)
 
-We also thought that the splitter would have been installed directly at the outlet of the master brake cylinder. Indeed, the hydraulic lines are bought depending on the quantity, not the length. This design change can save 300 euros.
+We also thought that the splitter would have been installed directly at the outlet of the master brake cylinder. Indeed, the hydraulic lines are bought depending on the quantity, not the length. This design change can save one hydraulic line, approximately 300 euros.
 %TODO: picture of the splitter
 %TODO: picture of the previous position of the spliiter
 %TODO: picture of the new position of the splitter
 %TODO: picture of the 1-S6 IPC (0051-01)
+
 The first M108 will be provided with the first version of the brakes but the next will have the splitter installed on the master brake cylinder.
 %TODO: refer to 2D drawings and partslist in annexe
 
 \subsection{Database}
-LAMS (signification?) is a new database recently created and still updated which will be used by the company. It will reference every part of the aircrafts by the part number.
+LAMS (Lambert Aircraft Management System) is a new database recently created and still updated which will be used by the company. It will reference every part of the aircrafts by the part number.
 %TODO: refer to the vocabulary section for the part number
 I was assigned to test this experimental database in order to check the user interface for mistakes and improve it.
 
@@ -206,12 +211,12 @@ This should also be available for embedded LSTC's: for instance, LSTC's 1-014 to
 
 \section{Results}
 \subsection{Evaluation of my contribution}
-  "I was pleased to see that even though I was an intern, I was assigned tasks that give a valuable contribution to the company. When my internship ended, all the documents and projects I had to work on were implemented and functional."
+ I was pleased to see that even though I was an intern, I was assigned tasks that give a valuable contribution to the company. When my internship ended, all the documents and projects I had to work on were implemented and functional.
 %TODO: maybe not the design project, we will see
 
 \subsection{Technical knowledge acquired}
-"This was also an opportunity for me to acquire some knowledge on a large panel of technologies"
-%TODO: how an aircraft work on every aspect : mechanics (fuel, engine, cooling systems, trim control... but also the production) avionics (ECU, autopilot (pitch & roll servos), avionics shelf...)
+This was also an opportunity for me to acquire some knowledge on a large panel of technologies and methods of production.
+%TODO: how an aircraft works on every aspect : mechanics (fuel, engine, cooling systems, trim control... but also the production) avionics (ECU, autopilot (pitch & roll servos), avionics shelf...)
 
 \newpage
 
@@ -228,6 +233,6 @@ This internship confirmed my desire to specialize in aeronautical engineering bu
 
 \bigskip
 
-I would like to thank Filip for giving me the opportunity to work on such an amazing project. I also would like to give a special thanks to Steven Lambert and Brecht Declerck for taking the time every day to help me and answer all my questions during those four months. Finally, I want to express my gratitude to all the members of the company for "giving me some of their time, trusting me and letting me work in a very nice and friendly environment. It was a pleasure working with all of you." %TODO: review the structure of this sentence
+I would like to thank Filip and Steven Lambert for giving me the opportunity to work on such an amazing project. I also would like to give a special thanks to Brecht Declerck for taking the time every day to help me and answer all my questions during those four months. Finally, I want to express my gratitude to all the members of the company for "giving me some of their time, trusting me and letting me work in a very nice and friendly environment. It was a pleasure working with all of you." %TODO: review the structure of this sentence
 
 \end{document}
