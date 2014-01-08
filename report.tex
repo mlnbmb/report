@@ -18,6 +18,8 @@
 %\begin{fullpar}
 %\end{fullpar}
 
+\usepackage{indentfirst} %permet d'indenter le premier paragraphe de chaque section
+
 \begin{document}
 
 \title{\textbf{Internship Report\\Design and certification of the Mission M108}}
@@ -71,7 +73,16 @@ The avionics workshop sells classic avionics products like headsets, GPS, transp
 
 \bigskip
 
-%TODO: diagram of the employees (Manager, 1 design engineer, 1 accountant (secretary?), 3 technicians in mechanical department, 3 in avionics department). PIC002
+The company is a SME of nine employees:
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\item \textbf{Design department:} 2 engineers (one of them is also the manager)
+\item \textbf{Production department:} 3 technicians
+\item \textbf{Avionics department:} 3 technicians
+\item \textbf{Administration:} 1 accountant
+\end{itemize}
+
+%TODO: diagram of the employees (Manager, 1 design engineer, 1 accountant, 3 technicians in mechanical department, 3 in avionics department)
 Decisions are taken quickly and information flows at a fast pace thanks to the simple but effective structure of the team.  There are different nationalities among the staff which demonstrates that the company is very open minded.
 
 \bigskip
@@ -131,6 +142,11 @@ In order to know better about the functioning of the plane, I was assigned to dr
 \newpage
 
 I also drew the instrument panel for the Pilot's Operating Handbook to have a global view of the cabin. Depending on the LSTC chosen, we have the instrument panel with the TL instrument or the G3X system.
+
+\bigskip
+
+\textbf{Note:} Refer to the glossary section \ref{sec:glossary} and in particular the subsection \ref{subsec:LSTC} for more information about LSTCs.
+
 %TODO: picture of the instrument panel (2D) PIC006
 \begin{figure}[ht!]
 	\begin{center}
@@ -184,8 +200,14 @@ The cabin heating system is an optional feature. It is installed on the firewall
 \newpage
 
 \subsubsection{Illustrated Parts Catalog: combining 3D design and logic}
+\label{subsubsec:IPC}
 
 In parallel with the 2D drawings production, I drew 3D drawings for the Illustrated Parts Catalog (IPC). Since Lambert Aircraft Engineering sells the aircraft as a kit in Europe to homebuilders, they have an IPC in order to explain step by step how to assemble the aircraft correctly with every part referenced.
+
+\bigskip
+
+\textbf{Note:} Refer to the glossary section \ref{sec:glossary} and in particular the subsection \ref{subsec:certifications} for more information about LSA certifications.
+
 %TODO: picture of a 3D drawing with an Excel sheet PIC011 PIC012
 
 \newpage
@@ -228,6 +250,10 @@ The electrical system is very complex because it depends on the choice of avioni
 
 This structure takes into account the basic electrical components which are present anyway, and each option is defined with one part number. If the client needs to see how to install the navigation lights, he will need to reach the 1-S2-995300-00 drawing for further information.
 
+\bigskip
+
+\textbf{Note:} Refer to the figure \ref{fig:PIC015} for the IPC structure for the electrical system.
+
 %TODO: picture of the 1-S2 IPC structure PIC015
 %refer to the structure later
 \begin{figure}[ht!]
@@ -240,7 +266,7 @@ This structure takes into account the basic electrical components which are pres
 
 \newpage
 
-\subsubsection{Pitot \& static and brake installations: rethinking existing systems}
+\subsubsection{Pitot \& static systems: rethinking existing systems}
 
 The Pitot and static systems are not new, but there was no parts list and assembly drawings for that. According with the production, I created the parts list in coordination with the previous installations.
 
@@ -261,8 +287,15 @@ A new Pitot probe is used with the Garmin avionics. It is a heated Pitot probe w
 
 \newpage
 
+\subsubsection{Brake installation: designing a new system}
+\label{subsubsec:brakes}
+
 The brake system was an important part of the internship. The 2D and 3D drawings already existed but for the tailwheel version.
 %TODO: add an explanation in the glossary for the tailwheel and nosewheel version
+
+\bigskip
+
+\textbf{Note:} Refer to the glossary section \ref{sec:glossary} and in particular the subsection \ref{subsec:nosewheeltailwheel} for more information about the tailwheel and nosewheel models.
 
 \bigskip
 
@@ -277,7 +310,7 @@ In coordination with the design and the production teams, we designed the new br
 	\end{center}
 \end{figure}
 
-We also thought that the splitter should have been installed directly in the outlet of the master brake cylinder. Indeed, the price of hydraulic lines depends nore on the quantity than the length. This design change can save one hydraulic line, approximately 50 euros. The first M108 will be provided with the first version of the brakes but the next will have the splitter installed on the master brake cylinder.
+We also thought that the splitter should have been installed directly in the outlet of the master brake cylinder. Indeed, the price of hydraulic lines depends more on the quantity than the length. This design change can save one hydraulic line, approximately 50 euros. The first M108 will be provided with the first version of the brakes but the next aircrafts will have the splitter installed on the master brake cylinder.
 %TODO: picture of the splitter PIC020
 \begin{figure}[ht!]
 	\begin{center}
@@ -317,7 +350,14 @@ We also thought that the splitter should have been installed directly in the out
 
 \subsection{Database}
 LAMS (Lambert Aircraft Management System) is a new database recently created and still updated which will be used by the company. It will reference every part of the aircrafts by the part number.
+
+\bigskip
 %TODO: refer to the glossary section for the part number
+
+\textbf{Note:} Refer to the glossary section \ref{sec:glossary} and in particular the subsection \ref{subsec:partnumber} for more information about the part numbering at Lambert Aircraft Engineering.
+
+\bigskip
+
 I was assigned to test this experimental database in order to check the user interface for mistakes and improve it.
 
 \subsubsection{Description of the database}
@@ -376,11 +416,23 @@ We chose to test the database with the 1-S6 section (brake system). The parts li
 	\end{center}
 \end{figure}
 
+\bigskip
+
+\textbf{Note:} Refer to the subsubsection \ref{subsubsec:brakes} for more information about the brake system for nosewheel model.
+
 \newpage
 
 \subsubsection{What it needed to be improved}
 Some little problems have been noticed like too short strings sometimes for the description of the part (status, material...).
 Certain issues were raised while we were adding new parts. The most important one is the LSTC structure: how can we have a logical structure for an assembly but also with the embedded LSTC's we can have? %refer to glossary and the 1-S2 structure
+
+\bigskip
+
+\textbf{Notes:} 
+\begin{itemize}
+\item Refer to the glossary section \ref{sec:glossary} and in particular the subsection \ref{subsec:LSTC} for more information about LSTCs.
+\item Refer to the subsubsection \ref{subsubsec:IPC} and in particular the figure \ref{fig:PIC015} for more information about the IPC structure for the electrical system.
+\end{itemize}
 
 \bigskip
 
@@ -448,10 +500,13 @@ I would like to thank Filip and Steven Lambert for giving me the opportunity to 
 \newpage
 
 \section{Glossary} 
+\label{sec:glossary}
 \subsection{LSA certifications}
+\label{subsec:certifications}
 \subsubsection{ASTM: American Society for Testing and Materials}
 The Light Sport Aircraft (LSA) certification has been created by the ASTM in 2003 for aircrafts with these following characteristics:
 \begin{itemize}
+\setlength{\itemsep}{0pt}
 \item Maximal speed : 120 kt (222km/h)
 \item Maximal weight: 600kg
 \item Maximal stall speed : 45 kt (83km/h)
@@ -472,32 +527,71 @@ The LSA standard from ASTM International is partially accepted by the EASA that 
 \subsubsection{FAA: Federal Aviation Administration}
 The LSA standard from ASTM is totally accepted by the FAA and allows series and amateur production of light sport aircrafts. The core task of Lambert Aircraft Engineering is to produce M108 to the USA in series.
 
-\subsubsection{STC's and LSTC's}
+\subsection{STCs and LSTCs}
+\label{subsec:LSTC}
 %LSTC =! STC (Supplemental Type Certificate)
 A Supplemental Type Certificate is a modification which needs to be approved by the FAA even if the airplane has already been certified (without this major modification). A LSTC is specific to Lambert Aircraft Engineering company: it is a modification to the airplane which doesn't need the approval of the FAA but only an ``internal'' approval.
 
 \bigskip
 
-Actually, it is more used as an option for the aircrafts but sometimes, you have to choose between some LSTC. For example:
+Actually, it is more used as an option for the aircrafts but sometimes, you have to choose between some LSTCs. For example:
 \begin{itemize}
 \item If you want an instrument panel with the TL Elektronic main display, you will have to ask for LSTC 1-001 but if you want the Garmin G3X instrument panel, you will ask for LSTC 1-002. In any case, you have to choose between LSTC 1-001 or LSTC 1-002 because it is essential to have an instrument panel in your airplane!
 \item However, if you want a cabin heating system (which is not essential to fly), you may ask for LSTC 1-007.
 \end{itemize}
 
-\subsubsection{Part classification system used in the company}
-PART NUMBER (Aircraft, group, material code, part number, revision)
-A part number is structured like the following template:
-Aircraft - Group - Material code Number - Revision
+\subsection{Part classification system used in the company}
+\label{subsec:partnumber}
 
-Aircraft: ``1'' refers to the M108, ``2'' refers to the M212
-Group: This can be a letter with a number referring to a system
-Material: This is a number referring to a specific material
-Number: This is the part number
-Revision: This is a number which is incremented each time we have a new revision of the part.
+Each part or assembly must be quickly identified to work efficiently and comply with regulations. For this purpose, a coding system has been established. A part is numbered according to the following coding:
 
-%TODO: example
+\begin{center}
+\begin{tabular}{p{3cm} p{12cm}}
+\textbf{Aircraft} & ``1'' refers to the M108, ``2'' refers to the M212 \tabularnewline
+- \tabularnewline
+\textbf{Group} & This can be a letter with a number referring to a system \tabularnewline
+- \tabularnewline
+\textbf{Material} & This is a number referring to a specific material.  The material code 00 means an assembly and 99 designates an exploded assembly view in 3D. \tabularnewline
+\tabularnewline
+\textbf{Part number} & Unique order number assigned to an item in a group. \tabularnewline
+- \tabularnewline
+\textbf{Revision} & Revision of the part or the assembly. This is a number which is incremented each time we have a major revision of the part. \tabularnewline
+\end{tabular}
+\end{center}
 
-\subsubsection{Nosewheel and tailwheel models}
+\bigskip
+
+\textbf{Example: 1-F4-160563-00} 
+
+\bigskip
+
+\begin{center}
+\begin{tabular}{p{3cm} p{12cm}}
+\textbf{1} & The involved aircraft is the Mission M108.  \tabularnewline
+- \tabularnewline
+\textbf{F4} & This groupe refers to the firewall forward installation. \tabularnewline
+- \tabularnewline
+\textbf{16} & This material is a6061T6 aluminium rod. \tabularnewline
+\textbf{0563} & This is the part no. 0563 in the F4 group. \tabularnewline
+- \tabularnewline
+\textbf{00} & It has not undergone any revision yet. \tabularnewline
+\end{tabular}
+\end{center}
+
+\newpage
+
+\subsection{Nosewheel and tailwheel models}
+\label{subsec:nosewheeltailwheel}
+%TODO: explain how the tailwheel version works. 
+%LANDING GEARS AND BRAKES RUDDER PEDALS
+
+The first and main difference between the tailwheel and nosewheel model is the landing gears.
+
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\item for the nosewheel model: it has a main landing gear;
+\item for the tailwheel model: it has a small wheel at the back of the airplane.
+\end{itemize}
 
 \begin{figure}[ht!]
 	\begin{center}
@@ -507,7 +601,13 @@ Revision: This is a number which is incremented each time we have a new revision
 	\end{center}
 \end{figure}
 
-%TODO: explain how the tailwheel version works. 
-%LANDING GEARS AND BRAKES RUDDER PEDALS
+The second difference is the brake system.
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\item for the nosewheel model: it has a brake lever which brakes the two rear wheels at the same time;
+\item for the tailwheel model: it has two rudder pedals in order to brake the port wheel or the starboard one.
+\end{itemize}
+
+\textbf{Note:} Refer to the subsubsection \ref{subsubsec:brakes} for more information about the brake system for nosewheel model.
 
 \end{document}
