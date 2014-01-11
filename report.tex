@@ -22,17 +22,39 @@
 
 \begin{document}
 
-\title{\textbf{Internship Report\\Design and certification of the Mission M108}}
+\title{~\\
+~\\
+\textbf{Internship Report}\\
+-- Confidential --\\
+~\\
+~\\
+Design and certification of the Mission M108\\
+~\\}
 
-\author{Melanie Bombardiere}
+\author{
+  \textbf{Melanie Bombardiere}\\
+  \textbf{melanie.bombardiere@etu.univ-valenciennes.fr}\\
+  \\
+  \\
+  \\
+  Industrial tutor: Filip Lambert\\
+  Academic tutor: Vincent Senocq
+}
+\date{September 2, 2013 - January 17, 2013}
+
+\begin{figure}[position]
+  \centering
+  \includegraphics[width=0.8\textwidth]{pics/logo.png}
+\end{figure}
 
 \maketitle
+
+\newpage
 
 \pagestyle{fancy}
 \fancyhead{}
 \fancyhead[LO,LE]{Design and certification process \\ of the Mission M108 LSA}
-
-\newpage
+\fancyhead[RO,RE]{\includegraphics[width=3.5cm]{pics/logo.png}}
 
 \tableofcontents
 
@@ -65,7 +87,7 @@ It will first give a brief introduction of the company and the major challenges 
 	\end{center}
 \end{figure}
 
-The company was created by Filip and Steven LAMBERT in 1996 and is specialized in limited series production of aircrafts and in avionics maintenance. Thanks to the agreements FAA Part 145 and EASA Part M Subpart F, Lambert Aircraft Engineering is authorized to sell and install avionics products on any kind of aircrafts like Dynon, Garmin or Avidyne products.
+The company was created by Filip and Steven LAMBERT in 1996 and is specialized in limited series production of aircrafts and avionics maintenance. Thanks to the agreements FAA Part 145 and EASA Part M Subpart F, Lambert Aircraft Engineering is authorized to sell and install avionics products on any kind of aircrafts like Dynon, Garmin or Avidyne products.
 
 \bigskip
 
@@ -87,7 +109,7 @@ Decisions are taken quickly and information flows at a fast pace thanks to the s
 
 \bigskip
 
-Aviation is an international environment. Lambert Aircraft Engineering does business with France, the Netherlands and the United Kingdom. The economy has been very weak since 2009 because of the economy crisis which makes things more difficult. On the aircrafts market the crisis is "noticeable", there a not many aircrafts selled anymore. But for the avionics market, it is still going very well.
+Aviation is an international environment. Lambert Aircraft Engineering does business with France, the Netherlands and the United Kingdom. The economy has been very weak since 2009 because of the economic crisis which makes things more difficult. On the aircrafts market the crisis is "noticeable", there are not many aircrafts selled anymore. But for the avionics market, it is still going very well.
 
 \newpage
 
@@ -100,7 +122,6 @@ Aviation is an international environment. Lambert Aircraft Engineering does busi
 		\label{fig:PIC003}
 	\end{center}
 \end{figure}
-
 
 The M108 is a two seater single engine light sport aircraft with an unswept untapered high wing. It has a welded tubular structure and is provided with the Rotax 912iS engine. The Mission M108 can be customised to meet personal preferences for avionics and instruments. In Europe, it is available as a kit built aircraft.
 
@@ -160,7 +181,7 @@ I also drew the instrument panel for the Pilot's Operating Handbook to have a gl
 
 \subsubsection{Engine assembly: example of the radiator}
 
-I updated partslists and 2D drawings in case of design modifications, and drew some parts when it was necessary. I will take the example of parts from the radiator and the cabin heating system for explaining my contribution, but I worked on others systems in the meantime.
+I updated partslists and 2D drawings in case of design modifications, and drew some parts when it was necessary. I will take the example of parts from the radiator and the cabin heating system for explaining my contribution, but I worked on other systems in the meantime.
 
 %TODO: picture of the radiator brackets PIC007
 \begin{figure}[ht!]
@@ -186,7 +207,7 @@ Designing radiator brackets seemed essential for the Mission M108 because of the
 
 \subsubsection{Cabin heating system: prevention and poka-yoke}
 
-The cabin heating system is an optional feature. It is installed on the firewall, on the engine side. We needed two brackets to mount bowden cables to open or close the valves to heat or not the cabin. These brackets are riveted to the mounting plate and have different lengths. Since we cannot afford to reverse those two, I decided to change the dimensions of the holes for rivets on the brackets and on the mounting plate. This mistake-proofing (poka-yoke) system prevents human errors for an assembly inaccuracy.
+The cabin heating system is an optional feature. It is installed on the firewall, on the engine side. We needed two brackets to mount bowden cables to open or close the valves to heat or not the cabin. These brackets are riveted to the mounting plate and have different lengths. Since we cannot afford to reverse them, I decided to change the dimensions of the holes for rivets on the brackets and on the mounting plate. This mistake-proofing (poka-yoke) system prevents human errors for an assembly inaccuracy.
 
 %TODO: picture of the two brackets + picture of the assembly PIC009 PIC010
 \begin{figure}[ht!]
@@ -209,6 +230,21 @@ In parallel with the 2D drawings production, I drew 3D drawings for the Illustra
 \textbf{Note:} Refer to the glossary section \ref{sec:glossary} and in particular the subsection \ref{subsec:certifications} for more information about LSA certifications.
 
 %TODO: picture of a 3D drawing with an Excel sheet PIC011 PIC012
+\begin{figure}[ht!]
+	\begin{center}
+		\includegraphics[width=11.5cm,trim = 1cm 14.5cm 1cm 0.5cm, clip]{pics/PIC011.pdf}
+		\caption{Excel sheet referencing parts of the brake lever assembly}
+		\label{fig:PIC11}
+	\end{center}
+\end{figure}
+
+\begin{figure}[ht!]
+	\begin{center}
+		\includegraphics[width=11.5cm,trim = 1.5cm 1.5cm 1.5cm 1.5cm, clip]{pics/PIC012.pdf}
+		\caption{3D drawing of the brake lever assembly}
+		\label{fig:PIC012}
+	\end{center}
+\end{figure}
 
 \newpage
 
@@ -233,7 +269,7 @@ I completed the sections concerning the firewall forward installation, the fuel 
 
 \newpage
 
-I then created all the IPC structure and the 3D drawings for the electrical, Pitot and static, and brake systems. The instrument panel installation is part of the electrical system which includes instruments and avionics equipment.
+I then created the entire IPC structure and the 3D drawings for the electrical, Pitot and static, and brake systems. The instrument panel installation is part of the electrical system which includes instruments and avionics equipment.
 
 %TODO: picture of the instrument panel (3D) PIC016
 \begin{figure}[ht!]
@@ -268,7 +304,7 @@ This structure takes into account the basic electrical components which are pres
 
 \subsubsection{Pitot \& static systems: rethinking existing systems}
 
-The Pitot and static systems are not new, but there was no parts list and assembly drawings for that. According with the production, I created the parts list in coordination with the previous installations.
+The Pitot and static systems are not new, but there were no parts list and assembly drawings for that. According with the production, I created the parts list in coordination with the previous installations.
 
 \bigskip
 
@@ -423,7 +459,7 @@ We chose to test the database with the 1-S6 section (brake system). The parts li
 \newpage
 
 \subsubsection{What it needed to be improved}
-Some little problems have been noticed like too short strings sometimes for the description of the part (status, material...).
+Some little problems have been noticed such as too short strings sometimes for the description of the part (status, material...).
 Certain issues were raised while we were adding new parts. The most important one is the LSTC structure: how can we have a logical structure for an assembly but also with the embedded LSTC's we can have? %refer to glossary and the 1-S2 structure
 
 \bigskip
@@ -436,8 +472,8 @@ Certain issues were raised while we were adding new parts. The most important on
 
 \bigskip
 
-We need to be able to find easily ALL the parts needed for a LSTC. For example, if we take the example of the LSTC 1-007 (which corresponds to the optional cabin heating system for the M108 aircraft), we should be able to know what parts we have in stock or if we need to order some of them and what parts we need to make ourselves.
-This should also be available for embedded LSTC's: for instance, LSTC's 1-014 to 1-017 (which correspond to the radio, transponder, com and autopilot installation) are only available for LSTC 1-013 (which corresponds to the TL panel).
+We need to be able to easily find all the parts needed for a LSTC. For example, if we take the example of the LSTC 1-007 (which corresponds to the optional cabin heating system for the M108 aircraft), we should be able to know what parts we have in stock or if we need to order some of them and what parts we need to make ourselves.
+This should also be available for embedded LSTCs: for instance, LSTCs 1-014 to 1-017 (which correspond to the radio, transponder, com and autopilot installation) are only available for LSTC 1-013 (which corresponds to the TL panel).
 
 %TODO: present the design of interior panels for cabin and my future work on that
 
@@ -451,21 +487,21 @@ This should also be available for embedded LSTC's: for instance, LSTC's 1-014 to
 This was also an opportunity for me to acquire some knowledge on a large panel of technologies and methods of production in the aeronautical field. For instance, how an aircraft works:
 \begin{itemize}
 \setlength{\itemsep}{0pt}
-\item on the mechanical aspect
+\item on the mechanical aspect:
 \begin{itemize}
 \setlength{\itemsep}{0pt}
-\item the fuel system
-\item the Rotax 912iS engine installation
-\item the enginecooling and oil-cooling systems
-\item the trim tab control
-\item but also the different ways of production
+\item the fuel system;
+\item the Rotax 912iS engine installation;
+\item the engine cooling and oil cooling systems;
+\item the trim tab control;
+\item but also the different ways of production...
 \end{itemize}
-\item on the electrical aspect
+\item on the electrical aspect:
 \begin{itemize}
 \setlength{\itemsep}{0pt}
-\item Engine Control Unit (ECU)
-\item autopilots: pitch and roll servos
-\item avionics shelf
+\item Engine Control Unit (ECU);
+\item autopilots: pitch and roll servos;
+\item avionics shelf.
 \end{itemize}
 \end{itemize}
 
@@ -483,11 +519,11 @@ We were in constant communication with the customer to satisfy the best his expe
 \newpage
 
 \section{Conclusion}
-Lambert Aircraft Engineering is specialized in limited series production of aircrafts and in avionics maintenance. The objective of the internship was mainly to complete the documentation in parallel with the production of the first M108 with a new engine and in preparation of limited series production. I was part of the design team, following the production department in order to be aware of design changes and draw or update new parts for the aicraft.
+Lambert Aircraft Engineering is specialized in limited series production of aircrafts and in avionics maintenance. The objective of the internship was mainly to complete the documentation in parallel with the production of the first M108 with a new engine and in preparation of limited series production. I was part of the design team, following the production department in order to be aware of design changes and draw or update new parts and assemblies for the aicraft.
 
 \bigskip
 
-The amount of tasks that were assigned to me, as well as their importance, was rewarding and made me feel valuable for the company. I worked on very challenging problems that deal with a large set of technologies, going from production drawings in 2D and 3D, database to design of the interior panels for the cabin. I worked closely with other engineers and technicians that were eager to assist and help me with any concern I had.
+The amount of tasks that were assigned to me, as well as their importance, was rewarding and made me feel valuable for the company. I worked on very challenging problems that deal with a large set of technologies, going from production drawings in 2D and 3D, database to design of new systems like the brake and the Pitot \& static system. I worked closely with other engineers and technicians that were eager to assist and help me with any concern I had.
 
 \bigskip
 
@@ -521,22 +557,22 @@ The Light Sport Aircraft (LSA) certification has been created by the ASTM in 200
 
 Building aircrafts certified LSA as an amateur or professionnal is approved with the ASTM F-37 standard.
 
-\subsubsection{EASA: European Agency for Safety Aviation}
-The LSA standard from ASTM International is partially accepted by the EASA that refuses series production of light sport aircrafts in Europe. However, it allows amateurs to build one, under condition of being certified by the host country of the aircraft. This requires Lambert Aircraft Engineering to sell the Mission M108 LSA kit in Europe to homebuilders.
-
 \subsubsection{FAA: Federal Aviation Administration}
 The LSA standard from ASTM is totally accepted by the FAA and allows series and amateur production of light sport aircrafts. The core task of Lambert Aircraft Engineering is to produce M108 to the USA in series.
+
+\subsubsection{EASA: European Agency for Safety Aviation}
+The LSA standard from ASTM International is partially accepted by the EASA that refuses series production of light sport aircrafts in Europe. However, it allows amateurs to build one, under condition of being certified by the host country of the aircraft. This requires Lambert Aircraft Engineering to sell the Mission M108 LSA kit in Europe to homebuilders.
 
 \subsection{STCs and LSTCs}
 \label{subsec:LSTC}
 %LSTC =! STC (Supplemental Type Certificate)
-A Supplemental Type Certificate is a modification which needs to be approved by the FAA even if the airplane has already been certified (without this major modification). A LSTC is specific to Lambert Aircraft Engineering company: it is a modification to the airplane which doesn't need the approval of the FAA but only an ``internal'' approval.
+A Supplemental Type Certificate is a modification which needs to be approved by the FAA or the EASA even if the airplane has already been certified (without this major modification). A LSTC is specific to Lambert Aircraft Engineering company: it is a modification to the airplane which does not need the approval of the FAA or the EASA but only an ``internal'' approval.
 
 \bigskip
 
 Actually, it is more used as an option for the aircrafts but sometimes, you have to choose between some LSTCs. For example:
 \begin{itemize}
-\item If you want an instrument panel with the TL Elektronic main display, you will have to ask for LSTC 1-001 but if you want the Garmin G3X instrument panel, you will ask for LSTC 1-002. In any case, you have to choose between LSTC 1-001 or LSTC 1-002 because it is essential to have an instrument panel in your airplane!
+\item If you want an instrument panel with the TL Elektronic main display, you will have to ask for LSTC 1-013 but if you want the Garmin G3X instrument panel, you will ask for LSTC 1-019. In any case, you have to choose between LSTC 1-013 or LSTC 1-019 because it is essential to have an instrument panel in your airplane!
 \item However, if you want a cabin heating system (which is not essential to fly), you may ask for LSTC 1-007.
 \end{itemize}
 
