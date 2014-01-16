@@ -19,6 +19,8 @@
 %\end{fullpar}
 
 \usepackage{indentfirst} %permet d'indenter le premier paragraphe de chaque section
+\usepackage{nopageno}
+\usepackage{setspace} %pour gérer l'interligne
 
 \begin{document}
 
@@ -28,7 +30,7 @@
 -- Confidential --\\
 ~\\
 ~\\
-Design and certification of the Mission M108\\
+Design and certification process of the Mission M108\\
 ~\\}
 
 \author{
@@ -51,12 +53,21 @@ Design and certification of the Mission M108\\
 
 \newpage
 
+\pagenumbering{arabic}
+\setcounter{page}{1} 
+
 \pagestyle{fancy}
 \fancyhead{}
-\fancyhead[LO,LE]{Design and certification process \\ of the Mission M108 LSA}
-\fancyhead[RO,RE]{\includegraphics[width=3.5cm]{pics/logo.png}}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\includegraphics[width=3.5cm]{pics/logo.png}}
 
+\fancyfoot{}
+\fancyfoot[L]{Design and certification process of the Mission M108}
+\fancyfoot[R]{Page \thepage}
+
+\begin{spacing}{1.5}
 \tableofcontents
+\end{spacing}
 
 \newpage
 

@@ -1,30 +1,44 @@
 \documentclass{beamer}
 
-% Tu peux changer le theme ici, regarde sur internet pour les noms des themes.
 \usetheme{Malmoe}
 
-% Ca c'est pour mettre des cercles pour les puces des listes.
 \setbeamertemplate{subsection in toc}[circle]
 \setbeamertemplate{section in toc}[circle]
 
-% Y'a pleins d'autres commandes pour changer des parametres, regarde sur
-% internet pour les trouver :)
+%\addtobeamertemplate{footline}{\insertframenumber/\inserttotalframenumber}
+
+\newcommand*\oldmacro{}%
+\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+  \oldmacro\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+\AtBeginSection[] {
+\begin{frame}\frametitle{Table of contents}
+
+  \begin{columns}[t]
+  \begin{column}{5cm}
+  \tableofcontents[sections={1-2},currentsection,hideothersubsection]
+  \end{column}
+  \begin{column}{5cm}
+  \tableofcontents[sections={3-5},currentsection,hideothersubsection]
+  \end{column}
+  \end{columns}
+
+\end{frame}
+}
 
 \begin{document}
 \subtitle{Internship Presentation}
 
-\title{Design and certification process\\ of the Mission M108}
+\title{Design \& certification process\\ of the Mission M108}
 
 \author{Melanie Bombardiere}
 
 \date{January 21st, 2014}
 
-% Une frame qui contient le titre
 \begin{frame}
   \titlepage
-\end{frame}
-
-\begin{frame}\frametitle{Table of contents}\tableofcontents
 \end{frame}
 
 \section{Introduction}
@@ -40,7 +54,7 @@
 \end{figure}
 
 \begin{itemize}
-    \item limited series production of aircrafts;
+    \item limited series production of aircraft;
     \item avionics maintenance.
   \end{itemize}
 \end{frame}
@@ -88,24 +102,36 @@ Light Sport Aircraft characteristics:
 \end{frame}
 
 \section{CAD and design work}
-\subsection{Radiator}
 
 \begin{frame}
+\begin{figure}[ht!]
+	\begin{center}
+		\includegraphics<1>[width=10cm,trim = 6cm 15cm 10cm 8cm, clip]{pics/M1083D.pdf}
+		\includegraphics<2>[width=7.5cm,trim = 30cm 15cm 60cm 45cm, clip]{pics/M1083D.pdf}
+		\caption{The Mission M108}
+		\label{fig:M1083D}
+	\end{center}
+\end{figure}
+\end{frame}
+
+\subsection{Radiator}
+
+\begin{frame}\frametitle{Radiator}
+\begin{figure}[ht!]
+	\begin{center}
+		\includegraphics[width=7.5cm,trim = 5cm 5cm 5cm 5cm, clip]{pics/PIC008.pdf}
+		\caption{The radiator assembly}
+		\label{fig:PIC008}
+	\end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}\frametitle{Radiator}
 \begin{figure}[ht!]
 	\begin{center}
 		\includegraphics[width=7.5cm,trim = 2cm 1cm 2cm 1cm, clip]{pics/PIC007.pdf}
 		\caption{The upper and lower port side brackets for the radiator}
 		\label{fig:PIC007}
-	\end{center}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\begin{figure}[ht!]
-	\begin{center}
-		\includegraphics[width=10cm,trim = 5cm 5cm 5cm 5cm, clip]{pics/PIC008.pdf}
-		\caption{The radiator assembly}
-		\label{fig:PIC008}
 	\end{center}
 \end{figure}
 \end{frame}
@@ -122,25 +148,31 @@ Light Sport Aircraft characteristics:
 \end{figure}
 \end{frame}
 
-\subsection{Brake system}
-
-\begin{frame}\frametitle{Brake system}
-\begin{figure}[ht!]
-	\begin{center}
-		\includegraphics[width=10cm,trim = 1.5cm 2.5cm 1.5cm 2.5cm, clip]{pics/PIC019.pdf}
-		\label{fig:PIC019}
-	\end{center}
-\end{figure}
-\end{frame}
-
 \subsection{Instrument panel}
 
 \begin{frame}\frametitle{Instrument panel}
 \begin{figure}[ht!]
 	\begin{center}
-		\includegraphics[width=10cm,trim = 2cm 2.2cm 2cm 2.2cm, clip]{pics/PIC016.pdf}
+		\includegraphics[width=8cm,trim = 4cm 4.cm 4cm 4.cm, clip]{pics/PIC030.pdf}
 		\caption{The instrument panel}
-		\label{fig:PIC016}
+		\label{fig:PIC030one}
+	\end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}\frametitle{Instrument panel}
+\begin{figure}[ht!]
+	\begin{center}
+		\includegraphics<1>[width=10cm,trim = 2.8cm 2.8cm 2.8cm 2.8cm, clip]{pics/PIC034.pdf}
+		\label{fig:PIC034}
+		\includegraphics<2>[width=10cm,trim = 2cm 2cm 2cm 2cm, clip]{pics/PIC033.pdf}
+		\label{fig:PIC033}
+		\includegraphics<3>[width=10cm,trim = 2cm 2cm 2cm 2cm, clip]{pics/PIC032.pdf}
+		\label{fig:PIC032}
+		\includegraphics<4>[width=10cm,trim = 2cm 2cm 2cm 2cm, clip]{pics/PIC031.pdf}
+		\label{fig:PIC031}
+		\includegraphics<5>[width=10cm,trim = 2cm 2cm 2cm 2cm, clip]{pics/PIC030.pdf}
+		\label{fig:PIC030}
 	\end{center}
 \end{figure}
 \end{frame}
@@ -155,11 +187,40 @@ Light Sport Aircraft characteristics:
 \end{figure}
 \end{frame}
 
+\subsection{Brake system}
+
+\begin{frame}\frametitle{Brake system}
+\begin{figure}[ht!]
+	\begin{center}
+		\includegraphics[width=10cm,trim = 1.5cm 2.5cm 1.5cm 2.5cm, clip]{pics/PIC019.pdf}
+		\label{fig:PIC019}
+	\end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}\frametitle{Brake system}
+\begin{figure}[ht!]
+	\begin{center}
+		\includegraphics[width=10cm,trim = 1cm 8cm 1cm 2.25cm, clip]{pics/PIC011.pdf}
+		\label{fig:PIC011}
+	\end{center}
+\end{figure}
+\end{frame}
+
+%LINK BETWEEN DATABASE AND IPC -- EXCEL SHEET
+%We wanted something that blablabla... so we did blablabla
+
 \section{Database}
 \subsection{Database presentation}
 
 \begin{frame}\frametitle{Database}
 LAMS (Lambert Aircraft Management System)
+\begin{itemize}
+\item identifying parts in assemblies;
+\item stock control;
+\item cost calculations.
+\end{itemize}
+
 \end{frame}
 
 \subsection{Database structure}
@@ -213,15 +274,15 @@ LAMS (Lambert Aircraft Management System)
 
 \begin{frame}\frametitle{Conclusion}
 \begin{itemize}
-\item Objective of the internship
-\item Design team
+\item Objective of the internship;
+\item Design team.
 \end{itemize}
 \end{frame}
 
 \begin{frame}\frametitle{Conclusion}
 \begin{itemize}
-\item Willingness to leverage existing products \& tools
-\item Being able to take decisions quickly
+\item Willingness to leverage existing products \& tools;
+\item Being able to take decisions quickly;
 \item \textbf{Getting things done!}
 \end{itemize}
 \end{frame}
